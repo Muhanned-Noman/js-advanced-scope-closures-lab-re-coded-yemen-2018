@@ -9,3 +9,19 @@ function produceDrivingRange(blockRange){
     }
   };
 };
+
+function produceTipCalculator(percent){
+  return function(amount){
+    return amount * percent;
+  };
+};
+
+function createDriver(){
+  let drivId = 0;
+  return class {
+    constructor(name){
+      this.id = ++drivId;
+      this.name = name;
+    }
+  }
+};
